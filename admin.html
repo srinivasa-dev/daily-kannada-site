@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Admin phrase editor for Daily Kannada." />
+  <title>Phrase Admin | Daily Kannada</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body class="admin-page">
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html">Daily Kannada</a>
+      <nav class="nav-links" aria-label="Admin navigation">
+        <span id="admin-user" class="nav-text"></span>
+        <button id="logout-button" class="nav-button" type="button">Logout</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container admin-page-container admin-layout">
+      <section class="card admin-hero">
+        <p class="eyebrow">Phrase Admin</p>
+        <h1>Manage Phrases</h1>
+        <p class="subtitle">Browse paginated phrases, grouped by category, and update rows inline.</p>
+      </section>
+
+      <section class="card toolbar-card">
+        <div class="toolbar">
+          <div>
+            <h2>Phrase Catalog</h2>
+            <p class="meta">Only admin users can access this page.</p>
+          </div>
+          <div class="toolbar-actions">
+            <label class="inline-field" for="page-size">
+              <span>Rows per page</span>
+              <select id="page-size" name="page-size">
+                <option value="10">10</option>
+                <option value="20" selected>20</option>
+                <option value="50">50</option>
+                <option value="100">100</option>
+                <option value="200">200</option>
+              </select>
+            </label>
+            <button id="refresh-button" class="button button-alt" type="button">Refresh</button>
+          </div>
+        </div>
+        <p id="admin-message" class="status-message" aria-live="polite"></p>
+      </section>
+
+      <section id="phrases-root" class="admin-sections" aria-live="polite"></section>
+
+      <section class="card pagination-card">
+        <div class="pagination-bar">
+          <button id="prev-button" class="button button-alt" type="button">Previous</button>
+          <span id="page-label" class="page-label">Page 1</span>
+          <button id="next-button" class="button" type="button">Next</button>
+        </div>
+        <div id="page-numbers" class="page-numbers"></div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-wrap">
+      <p>&copy; 2026 Daily Kannada</p>
+    </div>
+  </footer>
+  <script src="assets/js/config.js"></script>
+  <script type="module" src="assets/js/admin.js"></script>
+</body>
+</html>
