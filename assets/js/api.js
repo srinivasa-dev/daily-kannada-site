@@ -148,3 +148,9 @@ export function patchPhrase(id, payload) {
     data: payload,
   });
 }
+
+export function fetchAdminHealth() {
+  return apiRequest("/admin/health", {
+    method: "GET",
+  });
+}
