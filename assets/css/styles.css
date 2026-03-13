@@ -300,31 +300,25 @@ h2 {
 }
 
 .password-toggle-icon {
-  position: relative;
-  width: 1.35rem;
-  height: 1.35rem;
-  border: 2px solid currentColor;
-  border-radius: 75% 15%;
-  transform: rotate(45deg);
+  width: 1.2rem;
+  height: 1.2rem;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
-.password-toggle-icon::before {
-  content: "";
-  position: absolute;
-  inset: 0.28rem;
-  border-radius: 50%;
-  background: currentColor;
+.password-toggle .eye-closed {
+  display: none;
 }
 
-.password-toggle.is-visible .password-toggle-icon::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  top: -0.18rem;
-  width: 2px;
-  height: 1.7rem;
-  background: currentColor;
-  transform: translateX(-50%) rotate(-45deg);
+.password-toggle.is-visible .eye-open {
+  display: none;
+}
+
+.password-toggle.is-visible .eye-closed {
+  display: inline;
 }
 
 .phrase-table textarea {
