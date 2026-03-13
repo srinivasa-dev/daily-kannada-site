@@ -273,6 +273,60 @@ h2 {
   padding: 0.75rem 0.85rem;
 }
 
+.password-field {
+  position: relative;
+}
+
+.password-field input {
+  padding-right: 5.5rem;
+}
+
+.password-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  right: 0.55rem;
+  transform: translateY(-50%);
+  border: 0;
+  background: transparent;
+  color: var(--primary);
+  font: inherit;
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0.2rem 0.35rem;
+}
+
+.password-toggle-icon {
+  position: relative;
+  width: 1.35rem;
+  height: 1.35rem;
+  border: 2px solid currentColor;
+  border-radius: 75% 15%;
+  transform: rotate(45deg);
+}
+
+.password-toggle-icon::before {
+  content: "";
+  position: absolute;
+  inset: 0.28rem;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.password-toggle.is-visible .password-toggle-icon::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: -0.18rem;
+  width: 2px;
+  height: 1.7rem;
+  background: currentColor;
+  transform: translateX(-50%) rotate(-45deg);
+}
+
 .phrase-table textarea {
   resize: vertical;
   min-width: 220px;
@@ -313,6 +367,10 @@ h2 {
 
 .token-notice.error {
   color: #b42318;
+}
+
+.token-notice.success {
+  color: #167c3d;
 }
 
 .admin-layout,
