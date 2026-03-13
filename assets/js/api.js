@@ -134,6 +134,14 @@ export function loginRequest(email, password) {
   });
 }
 
+export function resetPasswordRequest(token, password) {
+  return apiRequest("/auth/reset-password", {
+    method: "POST",
+    authenticated: false,
+    data: { token, password },
+  });
+}
+
 export function fetchPhrases({ limit, offset }) {
   return apiRequest("/phrases", {
     method: "GET",

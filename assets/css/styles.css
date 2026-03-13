@@ -294,6 +294,27 @@ h2 {
   color: #167c3d;
 }
 
+.reset-page {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top right, rgba(244, 197, 66, 0.24), transparent 28%),
+    linear-gradient(180deg, #fffaf0 0%, #ffffff 100%);
+}
+
+.reset-card {
+  width: min(100%, 560px);
+}
+
+.token-notice,
+.form-hint {
+  margin: 0;
+  color: var(--muted);
+}
+
+.token-notice.error {
+  color: #b42318;
+}
+
 .admin-layout,
 .admin-sections {
   display: grid;
